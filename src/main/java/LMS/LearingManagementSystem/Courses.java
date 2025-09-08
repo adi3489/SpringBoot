@@ -1,6 +1,5 @@
 package LMS.LearingManagementSystem;
 
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -9,15 +8,13 @@ public class Courses {
     private String description;
     private String instructorName;
 
-    private List<Users> enrolledStudents;
-    private List<Lessons> lessons;
+    private List<Users> enrolledStudents = new ArrayList<>();
+    private List<Lessons> lessons = new ArrayList<>();
 
     public Courses(String title, String description, String instructorName) {
         this.title = title;
         this.description = description;
         this.instructorName = instructorName;
-        this.enrolledStudents = new ArrayList<>();
-        this.lessons = new ArrayList<>();
     }
 
     public void addLesson(Lessons lesson) {
@@ -30,15 +27,9 @@ public class Courses {
         }
     }
 
-    // Getters
     public String getTitle() { return title; }
     public String getDescription() { return description; }
     public String getInstructorName() { return instructorName; }
     public List<Users> getEnrolledStudents() { return enrolledStudents; }
     public List<Lessons> getLessons() { return lessons; }
-
-    // Setters
-    public void setTitle(String title) { this.title = title; }
-    public void setDescription(String description) { this.description = description; }
-    public void setInstructorName(String instructorName) { this.instructorName = instructorName; }
 }
